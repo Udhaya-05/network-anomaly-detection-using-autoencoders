@@ -1,0 +1,31 @@
+### **📌 Summary of Model Development Process**  
+
+1️⃣ **Started with Two Models:**  
+   - You initially asked for two different ML models.  
+   - We decided to focus on an **autoencoder-based anomaly detection model**.  
+
+2️⃣ **Dataset Transition:**  
+   - The original dataset was too large, leading to memory issues.  
+   - We switched to the **KDD dataset (NSL-KDD)** for network anomaly detection.  
+
+3️⃣ **Basic Autoencoder Implementation:**  
+   - Built an autoencoder with a **simple three-layer structure**.  
+   - The model struggled with **low recall for anomalies** and overfitting.  
+
+4️⃣ **Incremental Improvements:**  
+   - **Lowered anomaly detection threshold** (from 95% percentile → 90% → IQR method).  
+   - **Added noise to training data** to improve generalization.  
+   - **Balanced the dataset** by undersampling normal data.  
+
+5️⃣ **Advanced Optimizations:**  
+   - Increased model **complexity** by **adding more neurons** and depth.  
+   - Switched activation functions to **LeakyReLU and SELU** for better learning.  
+   - Changed **batch size and epochs** for better convergence.  
+   - Introduced **Isolation Forest** as a hybrid approach.  
+
+6️⃣ **Final Results:**  
+   - **Test Accuracy: 60.97%** (highest achieved).  
+   - **Recall for anomalies improved from 18% → 39%**.  
+   - **False negatives reduced significantly.**  
+
+This final model **performs significantly better** than the initial implementation. 🚀
